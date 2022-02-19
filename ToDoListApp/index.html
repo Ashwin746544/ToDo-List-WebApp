@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./sass/index.css">
+</head>
+
+<body>
+  <div class="container">
+    <form class="top" name="myForm">
+      <div class="title-container">
+        <label for="title" class="title-label">Title</label>
+        <input type="text" name="title" id="title" class="datafield" placeholder="Add title..." required>
+      </div>
+      <div class="disc-container">
+        <label for="disc" class="disc-label">Discription</label>
+        <textarea name="disc" id="disc" class="datafield" placeholder="Add discription..." required></textarea>
+      </div>
+      <div class="btn-container">
+        <input type="button" value="Add Task" class="addBtn taskAction">
+        <input type="button" value="Save Task" class="saveBtn taskAction">
+      </div>
+    </form>
+    <div class="tasks-heading">
+      <h1>Tasks</h1>
+    </div>
+    <div class="bottom Tasks-container">
+      <div class="no-task task">
+        <h2>No Task Added Yet!</h2>
+      </div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
