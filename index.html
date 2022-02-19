@@ -1,80 +1,40 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./sass/index.css">
+</head>
 
 <body>
-
-  <h2>JavaScript async / await</h2>
-  <div id="demo"></div>
-  <p onclick="location.assign('https:/\/\www.w3schools.com')">Wait 3 seconds (3000 milliseconds) for this page to
-    change.</p>
-  <p onclick="window.location = 'https:/\/\www.w3schools.com'">Wait 3 seconds (3000 milliseconds) for this page to
-    change.</p>
-
-  <h1 id="demo"></h1>
-
-  <script>
-    // async function myDisplay() {
-    //   let myPromise = new Promise(function (resolve) {
-    //     setTimeout(function () { resolve("I love You !!"); }, 3000);
-    //   });
-    //   document.getElementById("demo").innerHTML = await myPromise;
-    //   setTimeout(function () { }, 5000);
-    //   document.getElementById("demo").innerHTML = "waiting";
-    // }
-
-    // async function myDisplay() {
-    //   let myPromise = new Promise(function (resolve) {
-    //     setTimeout(function () { resolve("I love You !!"); }, 3000);
-
-    //   });
-    //   document.getElementById("demo").innerHTML = await myPromise;
-    //   await setTimeout(function () { return Promise(); }, 2000);
-    //   console.log(document.getElementById("demo").innerHTML);
-    //   document.getElementById("demo").innerHTML = "waiting";
-    // }
-    // async function myDisplay() {
-    //   let myPromise = new Promise(function (resolve) {
-    //     setTimeout(function () { resolve("I love You !!"); }, 3000);
-
-    //   });
-    //   document.getElementById("demo").innerHTML = await myPromise;
-    //   await new Promise((resolve) => setTimeout(function () { resolve("fdfskd"); }, 2000));
-    //   console.log(document.getElementById("demo").innerHTML);
-    //   document.getElementById("demo").innerHTML = "waiting";
-    // }
-
-    // myDisplay();
-
-    // myDisplay();
-
-    // window.close();
-    // window.resizeTo(500, 1000);
-    // document.write(window.innerHeight + " " + window.innerWidth);
-    // document.cookie = "name=ashwin;";
-    // document.cookie = "age=20;";
-    // document.write(document.cookie);
-    // navigator.geolocation.getCurrentPosition(showPosition);
-    // function showPosition(p) {
-    //   document.write("latitude" + p.coords.latitude + " longitude " + p.coords.longitude);
-    // }
-
-    // function loadDoc() {
-    //   const xhttp = new XMLHttpRequest();
-    //   xhttp.onload = function () {
-    //     document.getElementById("demo").innerHTML =
-    //       this.responseText;
-    //   }
-    //   xhttp.open("GET", "index.txt");
-    //   xhttp.send();
-    // }
-    // loadDoc()
-    function printNumber() {
-      for (let i = 1; i <= 10; i++) {
-        console.log(i + " ");
-      }
-    }
-    printNumber();
-  </script>
-
+  <div class="container">
+    <form class="top" name="myForm">
+      <div class="title-container">
+        <label for="title" class="title-label">Title</label>
+        <input type="text" name="title" id="title" class="datafield" placeholder="Add title..." required>
+      </div>
+      <div class="disc-container">
+        <label for="disc" class="disc-label">Discription</label>
+        <textarea name="disc" id="disc" class="datafield" placeholder="Add discription..." required></textarea>
+      </div>
+      <div class="btn-container">
+        <input type="button" value="Add Task" class="addBtn taskAction">
+        <input type="button" value="Save Task" class="saveBtn taskAction">
+      </div>
+    </form>
+    <div class="tasks-heading">
+      <h1>Tasks</h1>
+    </div>
+    <div class="bottom Tasks-container">
+      <div class="no-task task">
+        <h2>No Task Added Yet!</h2>
+      </div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
 </body>
 
 </html>
