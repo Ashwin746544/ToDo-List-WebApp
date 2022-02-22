@@ -1,10 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shizuru&display=swap");
 .addBackground {
   background: #ededed;
-}
-
-.enableNoTasks {
-  display: block;
+  text-decoration: line-through;
 }
 
 body {
@@ -16,6 +13,13 @@ body {
   max-width: 1320px;
   margin: auto;
   padding: 30px 15px;
+}
+
+.container .ToDoList {
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Shizuru", cursive;
+  margin-top: 0;
 }
 
 .container .top {
@@ -84,13 +88,68 @@ body {
   background: purple;
 }
 
+@-webkit-keyframes bntAnimate {
+  0% {
+    width: 90.45px;
+    height: 41px;
+    background-color: black;
+  }
+  50% {
+    width: 85px;
+    height: 35px;
+    background-color: white;
+  }
+  100% {
+    width: 90.45px;
+    height: 41px;
+    background-color: black;
+  }
+}
+
+@keyframes bntAnimate {
+  0% {
+    width: 90.45px;
+    height: 41px;
+    background-color: black;
+  }
+  50% {
+    width: 85px;
+    height: 35px;
+    background-color: white;
+  }
+  100% {
+    width: 90.45px;
+    height: 41px;
+    background-color: black;
+  }
+}
+
 .container .top .btn-container .saveBtn {
   background: green;
   display: none;
 }
 
-.container .tasks-heading {
-  margin-top: 60px;
+.container .top ::-webkit-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+.container .top :-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+.container .top ::-ms-input-placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+.container .top ::placeholder {
+  font-family: "Roboto", sans-serif;
+}
+
+.container .seperator {
+  height: 7px;
+  background: #f3e8e8;
+  margin: 40px auto;
+  max-width: 600px;
 }
 
 .container .tasks-heading h1 {
@@ -180,7 +239,25 @@ body {
   margin-bottom: 20px;
 }
 
-.container .bottom .no-task {
+.container .no-task {
   display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 3px 2px #808080c9;
+          box-shadow: 2px 2px 3px 2px #808080c9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100px;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 10px;
 }
 /*# sourceMappingURL=index.css.map */

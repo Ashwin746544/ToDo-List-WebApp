@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shizuru&display=swap");
 .addBackground {
   background: rgb(237, 237, 237);
-}
-.enableNoTasks {
-  display: block;
+  text-decoration: line-through;
 }
 body {
   background-color: #ffc600;
@@ -14,6 +12,12 @@ body {
   margin: auto;
   padding: 30px 15px;
 
+  .ToDoList {
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Shizuru", cursive;
+    margin-top: 0;
+  }
   .top {
     display: flex;
     flex-direction: column;
@@ -41,10 +45,6 @@ body {
         resize: none;
       }
     }
-    .title-container {
-      #title {
-      }
-    }
     .disc-container {
       #disc {
         height: 90px;
@@ -62,15 +62,40 @@ body {
       }
       .addBtn {
         background: purple;
+        @keyframes bntAnimate {
+          0% {
+            width: 90.45px;
+            height: 41px;
+            background-color: black;
+          }
+          50% {
+            width: 85px;
+            height: 35px;
+            background-color: white;
+          }
+          100% {
+            width: 90.45px;
+            height: 41px;
+            background-color: black;
+          }
+        }
       }
       .saveBtn {
         background: green;
         display: none;
       }
     }
+    ::placeholder {
+      font-family: "Roboto", sans-serif;
+    }
+  }
+  .seperator {
+    height: 7px;
+    background: #f3e8e8;
+    margin: 40px auto;
+    max-width: 600px;
   }
   .tasks-heading {
-    margin-top: 60px;
     h1 {
       text-align: center;
     }
@@ -128,8 +153,19 @@ body {
         }
       }
     }
-    .no-task {
-      display: none;
-    }
+  }
+  .no-task {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 2px #808080c9;
+    display: flex;
+    min-height: 100px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 10px;
   }
 }
