@@ -62,23 +62,9 @@ body {
       }
       .addBtn {
         background: purple;
-        @keyframes bntAnimate {
-          0% {
-            width: 90.45px;
-            height: 41px;
-            background-color: black;
-          }
-          50% {
-            width: 85px;
-            height: 35px;
-            background-color: white;
-          }
-          100% {
-            width: 90.45px;
-            height: 41px;
-            background-color: black;
-          }
-        }
+      }
+      .btnAnimate {
+        transform: scale(0.95);
       }
       .saveBtn {
         background: green;

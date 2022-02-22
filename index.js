@@ -38,10 +38,11 @@ if (tasksArray.length == 0) {
 }
 // Create Task
 addBtn.addEventListener("click", addTask);
-addBtn.addEventListener("click", () => {
-  // addBtn.style.animation = "btnAnimate 20s";
-})
 function addTask() {
+  addBtn.classList.add("btnAnimate");
+  setTimeout(() => {
+    addBtn.classList.remove("btnAnimate");
+  }, 100);
   console.log('onclick fired');
   const title = titleInput.value.trim();
   const discription = discriptionInput.value.trim();
